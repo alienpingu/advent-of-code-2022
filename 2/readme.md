@@ -40,3 +40,8 @@ Scissor - 3
 Win - 6
 Draw - 3 
 Lose - 0
+
+--Second Part--
+X - Lose
+Y - Draw
+z - Win
