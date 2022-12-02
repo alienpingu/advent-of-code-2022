@@ -14,6 +14,6 @@ let result = {
 
 fs.readFile("./input.txt", "utf8", (err, data) => {
   let points = [0, 0];
-  data.split("\r\n").map((e) => [0, 1].map((n) => (points[n] += result[e][n])));
+  data.split("\r\n").map((e) => points.map((n,i) => (points[i] += result[e][i])));
   points.map((p, i) => console.log(`Point ${i + 1}: ${p}`));
 });
