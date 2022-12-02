@@ -1,5 +1,7 @@
 const fs = require("fs");
 
+
+
 function match(str1, str2) {
     switch (str1) {
         case "A":
@@ -134,7 +136,6 @@ function main2(inputData) {
             let r = gameConverter(m[1]);
             let t = gamePoint2(r) + handPoint(a);
             points += t;
-            console.log(r , m, a,gamePoint2(r),handPoint(a), points);
         }
     })
     
