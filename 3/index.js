@@ -39,18 +39,15 @@ function groupArr(data, n) {
 function main(input) {
     let total = 0;
     input.split('\r\n').forEach((e,i)=> {
-        let splittedArr = splitString(e);
-        let char = compareTwoString(splittedArr[0],splittedArr[1]);
+        let char = compareTwoString(splitString(e)[0],splitString(e)[1]);
         (char !== false) ? total = Number(total) + Number(computeValue(char)) : null
-
    })
    return(total);
 }
 
 function main2(input) {
     let total = 0;
-    let grouped = groupArr(input.split('\r\n'), 3);
-    grouped.forEach(e => total += computeValue(compareThreeString(e[0],e[1],e[2])));
+    groupArr(input.split('\r\n'), 3).forEach(e => total += computeValue(compareThreeString(e[0],e[1],e[2])));
     return(total);
 }
 
