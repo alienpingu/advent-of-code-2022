@@ -9,39 +9,19 @@ function splitString(string) {
 
 function compareTwoString(string1, string2) {
     let result = false;
-    string1.split('').forEach(c1 => {
-        string2.split('').forEach(c2 => {
-            if(c1 === c2) {
-                result = c1
-            }
-        })
-    })
+    string1.split('').forEach(c1 => (string2.includes(c1)) ? result = c1 : null)
     return (result);
 }
 
 function compareThreeString(string1, string2, string3) {
     let result = false;
-    string1.split('').forEach(c1 => {
-        string2.split('').forEach(c2 => {
-            if(c1 === c2) {
-                string3.split('').forEach(c3 => {
-                    if (c1 === c3) {
-                        result = c1
-                    }
-                })
-            }
-        })
-    })
+    string1.split('').forEach(c1 => (string2.includes(c1)) ? (string3.includes(c1)) ? result = c1 : null : null)
     return (result);
 }
 
 function computeValue(char) {
     let result = 1
-    letters.forEach((e,i) => {
-        if (e === char) {
-            result += i
-        }
-    })
+    letters.forEach((e,i) => (e === char) ? result += i : null)
     return(result)
 }
 
